@@ -54,7 +54,7 @@ Once I trained and optimized the models, I then predicted on held out games from
 
 
 ### Modeling Results
-The best model was the Neural Network with team rolling 40 game features on the training and test data. The Neural Network models generally did best and the models trained on 40 game only rolling features generally did best. 
+The best model was the Neural Network with team rolling 40 game features on the training and test data. The Neural Network models generally did best and the models trained on 40 game only rolling features generally did best.<br/> 
 ![results](images/results.png)
 
 There are currently a handful of public models whose log loss on the current season's games is being [tracked](https://hockey-statistics.com/2021/05/03/game-projections-january-13th-2021/) on which I can compare the quality of my model to. Although I did not do better than the implied odds, my best model is competitive and performed roughly in the middle of the listed public models with a log loss on the 2021 season of 0.655534.
