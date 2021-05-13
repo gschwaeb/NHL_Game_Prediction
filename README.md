@@ -72,11 +72,11 @@ To further improve the models and the project overall, I would like to take the 
 - Build a web app to publish future game predictions
 
 ## Contact
-Gary Schwaeber
-gschwaeb@gmail.com 
-[LinkedIn](linkedin.com/in/gary-schwaeber)  
-[Github](github.com/gschwaeb) 
-[Blog](gsstats.medium.com) 
+Gary Schwaeber<br/>
+gschwaeb@gmail.com<br/>
+[LinkedIn](linkedin.com/in/gary-schwaeber)<br/>  
+[Github](github.com/gschwaeb)<br/> 
+[Blog](gsstats.medium.com)<br/> 
 
 
 
