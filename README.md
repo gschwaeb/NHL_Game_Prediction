@@ -55,14 +55,14 @@ Once I trained and optimized the models, I then predicted on held out games from
 
 ### Modeling Results
 The best model was the Neural Network with team rolling 40 game features on the training and test data. The Neural Network models generally did best and the models trained on 40 game only rolling features generally did best.<br/> 
-![results](images/results.png)
+![results](images/resultsb.png)
 
 There are currently a handful of public models whose log loss on the current season's games is being [tracked](https://hockey-statistics.com/2021/05/03/game-projections-january-13th-2021/) on which I can compare the quality of my model to. Although I did not do better than the implied odds, my best model is competitive and performed roughly in the middle of the listed public models with a log loss on the 2021 season of 0.655534.
 
 ## Evaluating Model Profitability
 I back tested the predictions from my best model against [historical odds](https://www.sportsbookreviewsonline.com/scoresoddsarchives/nhl/nhloddsarchives.htm). With a strategy of bet to win $100 on teams where the model's probability to to win is greater than the implied odds. The strategy resulted in an ROI of 2.04% per bet and profit of $1,473.69. The model typically liked the home team (betting the home team 59.1% vs 23.2% on the away team) and typically liked the underdog (betting 47.2% on the underdog vs 23.2% on the favorite). The model did not bet on 17.6% of games due to the vig pushing implied probabilities above the model's probability output for both the home and away team winning in those games. Below we can see the cumulative profit over time which is certainly a roller coaster.
 Although this is a backtested scenario, this does provide evidence that the model can potentially provide a profitable betting strategy in the future when predicting on out of sample games. 
-![profit]('images/profit.png')
+![profit](images/profit.png)
 
 ## Next Steps
 To further improve the models and the project overall, I would like to take the following next steps
