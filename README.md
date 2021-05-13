@@ -7,7 +7,7 @@ With sports betting becoming increasingly popular and mainstream I believe that 
 ## [Data Collection](https://github.com/gschwaeb/NHL_Game_Prediction/blob/master/Data_Collection.ipynb)
 Team and goalie game logs were scraped from [Natural Stat Trick](https://www.naturalstattrick.com/). Official NHL game results were scraped from the NHL API via the python library [hockey_scraper](https://hockey-scraper.readthedocs.io/en/stable/hockey_scraper.html).
 
-## Features
+### Features
 Team features include:
 - 5v5 Fenwick For% Score and Venue Adjusted
 - 5v5 Goals For % Score and Venue Adjusted
@@ -53,7 +53,7 @@ The score I used to optimize and judge the models was log loss, however, I also 
 Once I trained and optimized the models, I then predicted on held out games from the current 2021 season. 
 
 
-## Results
+### Modeling Results
 The best model was the Neural Network with team rolling 40 game features on the training and test data. The Neural Network models generally did best and the models trained on 40 game only rolling features generally did best. 
 ![results](images/results.png)
 
