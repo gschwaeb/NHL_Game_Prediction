@@ -73,10 +73,10 @@ To further improve the models and the project overall, I would like to take the 
 
 ## Contact
 Gary Schwaeber
-gschwaeb@gmail.com
-linkedin.com/in/gary-schwaeber
-github.com/gschwaeb
-gsstats.medium.com
+gschwaeb@gmail.com 
+[LinkedIn](linkedin.com/in/gary-schwaeber)  
+[Github](github.com/gschwaeb) 
+[Blog](gsstats.medium.com) 
 
 
 
