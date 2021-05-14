@@ -29,16 +29,16 @@ See the [glossary](https://www.naturalstattrick.com/glossary.php?teams) from Nat
 
 ## [Exploratory Data Analysis](https://github.com/gschwaeb/NHL_Game_Prediction/blob/master/Exploratory%20Data%20Analysis.ipynb)
 
-Home teams win the majority of games, but are winning decreasingly less games over the seasons.
+The home teams win the majority of games, but have won a smaller % of games in recent seasons.
 ![hws](images/hws.png)
 
-Looking that the B2B effect on home win% it appears that the home team playing on a back to back has a much bigger effect than when the away team is playing in a back to back. I am unsure of the causation behind this. 
+Looking that the B2B effect on home win%, playing back to back definitley effects win% and it appears that the home team playing on a back to back has a much bigger effect than when the away team is playing in a back to back. 
 ![b2b](images/b2b.png)
 
-The most prominent team features that show up visually in a distribution of winning vs losing teams is Expected Goals For % for the last 40 games. From the below  graphs you can see the winning teams distribution is slightly to the right with fatter right tails than the losing team. Still, the distributions have a lot of overlap showing that bad teams win and good teams lose often.
+The most explicit team feature that shows up visually is Expected Goals For % for the last 40 games. From the below  graphs you can see the winning teams' distribution is slightly to the right with fatter right tails than the losing teams'. Still, the distributions have a lot of overlap. This exemplifies that there is a lot of parity in the NHL. Bad teams win and good teams lose often.
 ![xGF](images/xGF.png)
 
-Looking at the below two goalie stats distribution, we again see the distribution of winning teams have higher quality goaltending, but only slightly
+Looking at the below two goalie distributions for Fenwick Save %, we again see the distribution of winning teams have higher quality goaltending, but the difference is only slight. By looking at the below and above histograms, I can infer that any feature indicating strength will only slightly nudge win probability up for that team. This is something to keep in mind when I do the modeling.
 ![FSV](images/FSV.png)
 
 
@@ -54,14 +54,14 @@ Once I trained and optimized the models, I then predicted on held out games from
 
 
 ### Modeling Results
-The best model was the Neural Network with team rolling 40 game features on the training and test data. The Neural Network models generally did best and the models trained on 40 game only rolling features generally did best.<br/> 
+The best model was the Neural Network with rolling 40 game team features on both the training CV and test data. The Neural Network models generally did best and the models trained on 40 game only rolling features also generally did best.<br/> 
 ![results](images/resultsb.png)
 
-There are currently a handful of public models whose log loss on the current season's games is being [tracked](https://hockey-statistics.com/2021/05/03/game-projections-january-13th-2021/) on which I can compare the quality of my model to. Although I did not do better than the implied odds, my best model is competitive and performed roughly in the middle of the listed public models with a log loss on the 2021 season of 0.655534. Below log losses from external models were recorded as of 5/2.<br/> 
+There are currently a handful of public models whose log loss on the current season's games is being [tracked](https://hockey-statistics.com/2021/05/03/game-projections-january-13th-2021/) on which I can compare the quality of my model to. Although I did not do better than the implied odds, my best model is competitive and performed roughly in the middle of the listed public models with a log loss on the 2021 season of 0.655534. The below log losses from external models were recorded as of 5/2/2021.<br/> 
 <img src="images/model_comparison.png" alt="model_comparison" width="300"/>
 
 ## [Evaluating Model Profitability](https://github.com/gschwaeb/NHL_Game_Prediction/blob/master/Evaluating%20Model%20Profitability.ipynb)
-I back tested the predictions from my best model against [historical odds](https://www.sportsbookreviewsonline.com/scoresoddsarchives/nhl/nhloddsarchives.htm). With a strategy of bet to win $100 on teams where the model's probability to to win is greater than the implied odds. The strategy resulted in an ROI of 2.04% per bet and profit of $1,473.69. The model typically liked the home team (betting the home team 59.1% vs 23.2% on the away team) and typically liked the underdog (betting 47.2% on the underdog vs 23.2% on the favorite). The model did not bet on 17.6% of games due to the vig pushing implied probabilities above the model's probability output for both the home and away team winning in those games. Below we can see the cumulative profit over time which is certainly a roller coaster.
+I back tested the predictions from my best model against [historical odds](https://www.sportsbookreviewsonline.com/scoresoddsarchives/nhl/nhloddsarchives.htm). The strategy was to bet to win $100 on teams where the model's probability to to win is greater than the implied odds. The strategy resulted in an ROI of 2.04% per bet and profit of $1,473.69. The model typically liked the home team (betting the home team 59.1% vs 23.2% on the away team) and typically liked the underdog (betting 47.2% on the underdog vs 23.2% on the favorite). The model did not bet on 17.6% of games due to the vig pushing implied probabilities above the model's probability output for both the home and away team winning in those games. Below we can see the cumulative profit over time which is certainly a roller coaster.
 Although this is a backtested scenario, this does provide evidence that the model can potentially provide a profitable betting strategy in the future when predicting on out of sample games. 
 ![profit](images/profit.png)
 
