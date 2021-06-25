@@ -33,6 +33,7 @@ The home teams win the majority of games, but have won a smaller % of games in r
 ![hws](images/hws.png)
 
 Looking that the B2B effect on home win%, playing back to back definitley effects win% and it appears that the home team playing on a back to back has a much bigger effect than when the away team is playing in a back to back. 
+
 ![b2b](images/b2b.png)
 
 The most explicit team feature that shows up visually is Expected Goals For % for the last 40 games. From the below  graphs you can see the winning teams' distribution is slightly to the right with fatter right tails than the losing teams'. Still, the distributions have a lot of overlap. This exemplifies that there is a lot of parity in the NHL. Bad teams win and good teams lose often.
